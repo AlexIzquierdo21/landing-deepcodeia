@@ -2,13 +2,13 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #0a0a0a;
-    color: white;
+    color: #20FF00;
     text-align: center;
     padding: 2rem;
 }
 
 h1 {
-    color: #00ff7f;
+    color: #20FF00;
     font-size: 2.5rem;
 }
 
@@ -20,7 +20,7 @@ h1 {
     display: inline-block;
     margin: 0.5rem;
     padding: 1rem 2rem;
-    background: #00ff7f;
+    background: #20FF00;
     color: black;
     font-weight: bold;
     border-radius: 8px;
@@ -30,13 +30,33 @@ h1 {
 
 .links a:hover {
     transform: scale(1.20);
-    background: #00cc66;
+    background: #00cc66
 }
 
 .live {
     margin-top: 3rem;
     padding: 1rem;
-    border: 1px solid #00ff7f;
+    border: 1px solid #20FF00;
     border-radius: 10px;
     background: rgba(0, 255, 127, 0.1);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
