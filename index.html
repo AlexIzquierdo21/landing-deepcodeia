@@ -1,47 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-           <meta charset="UTF-8">
-           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-           <title>DeepCodeIA - Landing Page</title>
-           <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeepCodeIA - Landing Page</title>
+
+    <meta name="description" content="DeepCodeIA: aprende programación de forma práctica con vídeos, directos y proyectos reales." />
+    <meta name="theme-color" content="#20FF00" />
+
+    <meta property="og:title" content="DeepCodeIA - Landing" />
+    <meta property="og:description" content="Aprende programación de forma práctica con DeepCodeIA." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="2ndo_logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://www.youtube.com" />
+    <link rel="preconnect" href="https://i.ytimg.com" />
+
+    <!--Favicon -->
+    <link rel="icon" href="data:," />
+
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-       <main>
-               <h1>DeepCodeIA</h1>
-               <p>Aprende programación de forma práctica</p>
+    <main class="container">
+        <header class="hero">
+            <h1>DeepCodeIA</h1>
+            <p class="tagline"> Aprende programación de forma práctica</p>
+        </header>
 
-           <section class="links">
-               <a class="social-link youtube" href="https://youtube.com/@DeepCodeIA" target="_blank"
-                  rel="noopener noreferrer" aria-label="YouTube de DeepCodeIA">YouTube</a>
-               <a class="social-link instagram" href="https://instagram.com/deepcode.ia" target="_blank"
-                  rel="noopener noreferrer" aria-label="Instagram de DeepCodeIA">Instagram</a>
-               <a class="social-link tiktok" href="https://tiktok.com/@deepcodeia" target="_blank"
-                  rel="noopener noreferrer" aria-label="TikTok de DeepCodeIA">TikTok</a>
-               <a class="social-link github" href="https://github.com/AlexIzquierdo21" target="_blank"
-                  rel="noopener noreferrer" aria-label="GitHub de DeepCodeIA">GitHub</a>
-           </section>
+        <section class="links" aria-label="Redes sociales">
+            <a class="social-link youtube" href="https://youtube.com/@DeepCodeIA" target="_blank"
+               rel="noopener noreferrer" aria-label="YouTube de DeepCodeIA">YouTube</a>
+            <a class="social-link instagram" href="https://instagram.com/deepcode.ia" target="_blank"
+               rel="noopener noreferrer" aria-label="Instagram de DeepCodeIA">Instagram</a>
+            <a class="social-link tiktok" href="https://tiktok.com/@deepcodeia" target="_blank"
+               rel="noopener noreferrer" aria-label="TikTok de DeepCodeIA">TikTok</a>
+            <a class="social-link github" href="https://github.com/AlexIzquierdo21" target="_blank"
+               rel="noopener noreferrer" aria-label="GitHub de DeepCodeIA">GitHub</a>
+        </section>
 
-           <section class="live">
-               <h2>Próximo directo</h2>
-               <p>Construyendo esta landing page desde cero</p>
-               <div id="countdown">Cargando...</div>
-           </section>
-           <div class="featured-video">
-               <iframe
-                   class="yt-embed"
-                   src="https://www.youtube.com/embed/videoseries?list=UUApsnpx_r5ZKlbxFpIKkTzw"
-                   title="Último Video de YouTube"
-                   loading="lazy"
-                   referrerpolicy="no-referrer"
-                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                   allowfullscreen></iframe>
-           </div>
-       </main>
+        <section class="videos" id="videos">
+            <h2>Último Vídeo</h2>
+            <div class="featured-video">
+                <iframe
+                    class="yt-embed"
+                    src="https://www.youtube.com/embed/videoseries?list=UUApsnpx_r5ZKlbxFpIKkTzw"
+                    title="Subidas recientes en Youtube"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </section>
+        <section class="live" id="directo">
+            <h2>Próximo directo</h2>
+            <p>Construyendo esta landing page desde cero</p>
+
+            <div id="countdown" aria-live="polite">Cargando...</div>
+            <p id="live-date" class="live-date"></p>
+
+            <a
+                id="live-cta"
+                href="https://youtube.com/@DeepCodeIA/live"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-outline-green"
+                hidden
+            >Entrar al directo</a>
+        </section>
+        <section class="about" id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>
+                Soy Alex, creador de DeepCodeIA. Comparto cómo aprendo y enseño
+                programación con proyectos reales,
+                en Python, HTML, CSS y JavaScript.
+            </p>
+        </section>
+        <section class="content-types" id="contenidos">
+            <h2>Mis Contenidos</h2>
+            <ul class>
+                <li>Shorts educativos de Python, MySQL y tips de programación.</li>
+                <li>Directos construyendo proyectos desde cero.</li>
+                <li>Series prácticas y retos semanales.</li>
+            </ul>
+        </section>
+        <section class="mission" id="proposito">
+            <h2>Por qué creo contenido?</h2>
+            <p>
+                Creo que la programación se aprende practicando. Quiero demostrar que con constancia y proyectos reales
+                cualquiera puede avanzar.
+            </p>
+        </section>
+
+        <footer class="footer">
+            <p>© 2025 DeepCodeIA · <a class="footer-link" href="mailto:hola@deepcodeia.dev">Contacto</a></p></p>
+        </footer>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
-
 
 
 
