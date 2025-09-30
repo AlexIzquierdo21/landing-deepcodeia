@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DeepCodeIA - Landing Page</title>
+    <title>DeepCodeIA</title>
 
     <meta name="description" content="DeepCodeIA: aprende programación de forma práctica con vídeos, directos y proyectos reales." />
     <meta name="theme-color" content="#20FF00" />
@@ -19,7 +19,9 @@
 
     <!--Favicon -->
     <link rel="icon" href="data:," />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -29,24 +31,22 @@
             <p class="tagline"> Aprende programación de forma práctica</p>
         </header>
 
-        <section class="links" aria-label="Redes sociales">
-            <a class="social-link youtube" href="https://youtube.com/@DeepCodeIA" target="_blank"
-               rel="noopener noreferrer" aria-label="YouTube de DeepCodeIA">YouTube</a>
-            <a class="social-link instagram" href="https://instagram.com/deepcode.ia" target="_blank"
-               rel="noopener noreferrer" aria-label="Instagram de DeepCodeIA">Instagram</a>
-            <a class="social-link tiktok" href="https://tiktok.com/@deepcodeia" target="_blank"
-               rel="noopener noreferrer" aria-label="TikTok de DeepCodeIA">TikTok</a>
-            <a class="social-link github" href="https://github.com/AlexIzquierdo21" target="_blank"
-               rel="noopener noreferrer" aria-label="GitHub de DeepCodeIA">GitHub</a>
-        </section>
+        <nav class="section-nav" aria-label="Secciones del sitio">
+            <a class="nav-link" href="#videos">Último vídeo</a>
+            <a class="nav-link" href="#directo">Próximo directo</a>
+            <a class="nav-link" href="#sobre-mi">Sobre mí</a>
+            <a class="nav-link" href="#rrss">Redes Sociales</a>
+        </nav>
 
+
+        <!--- últimos videos (playlist) --->
         <section class="videos" id="videos">
             <h2>Último Vídeo</h2>
             <div class="featured-video">
                 <iframe
                     class="yt-embed"
                     src="https://www.youtube.com/embed/videoseries?list=UUApsnpx_r5ZKlbxFpIKkTzw"
-                    title="Subidas recientes en Youtube"
+                    title="Subidas recientes en YouTube"
                     loading="lazy"
                     referrerpolicy="no-referrer"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -69,7 +69,7 @@
                 hidden
             >Entrar al directo</a>
         </section>
-        <section class="about" id="sobre-mi">
+        <section class="about section-card" id="sobre-mi">
             <h2>Sobre mí</h2>
             <p>
                 Soy Alex, creador de DeepCodeIA. Comparto cómo aprendo y enseño
@@ -77,7 +77,7 @@
                 en Python, HTML, CSS y JavaScript.
             </p>
         </section>
-        <section class="content-types" id="contenidos">
+        <section class="content-types section-card" id="contenidos">
             <h2>Mis Contenidos</h2>
             <ul class>
                 <li>Shorts educativos de Python, MySQL y tips de programación.</li>
@@ -85,16 +85,27 @@
                 <li>Series prácticas y retos semanales.</li>
             </ul>
         </section>
-        <section class="mission" id="proposito">
-            <h2>Por qué creo contenido?</h2>
+        <section class="mission section-card" id="proposito">
+            <h2>¿Por qué creo contenido?</h2>
             <p>
                 Creo que la programación se aprende practicando. Quiero demostrar que con constancia y proyectos reales
                 cualquiera puede avanzar.
             </p>
         </section>
 
-        <footer class="footer">
-            <p>© 2025 DeepCodeIA · <a class="footer-link" href="mailto:hola@deepcodeia.dev">Contacto</a></p></p>
+        <footer class="footer" id="rrss">
+            <div class="footer-socials" aria-label="Redes sociales">
+                <a class="social-link social-link--sm youtube" href="https://youtube.com/@DeepCodeIA" target="_blank"
+                   rel="noopener noreferrer" aria-label="YouTube de DeepCodeIA">YouTube</a>
+                <a class="social-link social-link--sm instagram" href="https://instagram.com/deepcode.ia" target="_blank"
+                   rel="noopener noreferrer" aria-label="Instagram de DeepCodeIA">Instagram</a>
+                <a class="social-link social-link--sm tiktok" href="https://tiktok.com/@deepcodeia" target="_blank"
+                   rel="noopener noreferrer" aria-label="TikTok de DeepCodeIA">TikTok</a>
+                <a class="social-link social-link--sm github" href="https://github.com/AlexIzquierdo21" target="_blank"
+                   rel="noopener noreferrer" aria-label="GitHub de DeepCodeIA">GitHub</a>
+            </div>
+
+            <p>© 2025 DeepCodeIA · <a class="footer-link" href="mailto:hola@deepcodeia.dev">Contacto</a></p>
         </footer>
     </main>
     <script src="script.js"></script>

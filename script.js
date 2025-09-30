@@ -1,4 +1,4 @@
-const LIVE_ISO = "2025-09-25T17:30:00+02:00";
+const LIVE_ISO = "2025-09-30T18:34:00+02:00";
 
 const targetDate = new Date(LIVE_ISO);
 const targetMs = targetDate.getTime();
@@ -8,7 +8,7 @@ function formatTime(distance){
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 *60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 *60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    return `${days}d ${hours}h${minutes}m ${seconds}s`;
+    return `${days}d ${hours}h ${minutes}m ${seconds}s`;
 }
 
 function setReadableDate(){
@@ -25,23 +25,25 @@ function updateCountdown(){
     if(!el) return;
 
     const now = Date.now();
-    const distance = targetMS - now;
+    const distance = targetMs - now;
 
-    if (distance < 0) {
+    if (distance <= 0) {
         el.textContent = "¡Estamos en Directo!";
+        el.classList.add("live-now");
         if (cta) cta.hidden = false;
         return;
     }
 
     if(distance <= 5 * 60 * 1000) {
         el.classList.add("soon");
+        if (cta) cta.hidden = false;
     } else {
         el.classList.remove("soon");
+        if (cta) cta.hidden = true;
     }
 
     el.textContent = formatTime(distance);
 }
-
 setReadableDate();
 updateCountdown();
 setInterval(updateCountdown, 1000);
@@ -50,7 +52,6 @@ setInterval(updateCountdown, 1000);
 
 
 
-º
 
 
 
