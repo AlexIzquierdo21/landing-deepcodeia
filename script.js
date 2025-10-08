@@ -1,7 +1,7 @@
 // ====== CONFIG ======
 const TIMEZONE_NAME = "Europe/Madrid";
 
-// Programa (0=Dom, 1=Lun, ..., 6=Sáb)
+
 const SCHEDULE = [
     { dow: 2, hour: 17, minute: 30, label: "Martes 17:30"  }, // Mar
     { dow: 4, hour: 17, minute: 30, label: "Jueves 17:30"  }, // Jue
@@ -9,9 +9,9 @@ const SCHEDULE = [
 ];
 
 // Duración del directo (ventana activa) en minutos
-const LIVE_WINDOW_MINUTES = 150; // 2h30 por si te alargas ;)
+const LIVE_WINDOW_MINUTES = 150;
 
-// ====== UTILS ======
+
 function pad(n){ return n.toString().padStart(2, "0"); }
 
 function formatTime(distanceMs){
@@ -49,10 +49,10 @@ function nextDateForDow(base, targetDow, hour, minute){
         hour, minute, 0, 0
     );
 
-    // Días hasta el target
+
     let deltaDays = (targetDow - currentDow + 7) % 7;
 
-    // Si es hoy y ya pasó la hora, empuja 7 días
+
     if (deltaDays === 0 && candidate <= now) deltaDays = 7;
 
     const result = new Date(candidate.getTime());
@@ -85,7 +85,7 @@ function isWithinLiveWindow(now, start, windowMinutes){
         return;
     }
 
-    // Accesibilidad
+
     elCountdown.setAttribute("aria-live", "polite");
     elReadable.setAttribute("aria-live", "polite");
 
@@ -94,7 +94,7 @@ function isWithinLiveWindow(now, start, windowMinutes){
     function tick(){
         const now = new Date();
 
-        // ¿Estamos dentro del directo?
+
         if (isWithinLiveWindow(now, nextStream, LIVE_WINDOW_MINUTES)){
             elCountdown.textContent = "🔴 ¡EN DIRECTO!";
             elReadable.textContent  = `Comenzó: ${toReadable(nextStream)}`;
@@ -102,13 +102,13 @@ function isWithinLiveWindow(now, start, windowMinutes){
             return;
         }
 
-        // Si ya terminó esa ventana, calcula el siguiente
+
         const windowEnd = new Date(nextStream.getTime() + LIVE_WINDOW_MINUTES * 60 * 1000);
         if (now > windowEnd){
             nextStream = getNextStream(now);
         }
 
-        // Render cuenta atrás
+        // Cuenta atrás
         const distance = nextStream.getTime() - now.getTime();
         elCountdown.textContent = `⏳ ${formatTime(distance)}`;
         elReadable.textContent  = toReadable(nextStream);
