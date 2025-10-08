@@ -425,6 +425,94 @@ html { scroll-behavior: smooth; }
     font-weight: 600;
 }
 
+/* ======= Ajustes responsive ======= */
+
+/* Tablet y abajo */
+@media (max-width: 768px){
+    body{
+        padding: 1.25rem;                 /* menos margen alrededor */
+    }
+
+    .container{
+        padding: 0 .75rem;                /* menos padding lateral */
+    }
+
+    /* H1 más contenido en móvil */
+    h1{ font-size: clamp(2.2rem, 8vw, 3.2rem); }
+
+    /* Menú de secciones más compacto */
+    .section-nav{
+        gap: .5rem;
+        margin-top: 1rem;
+    }
+    .nav-link{
+        padding: .5rem .85rem;
+        font-size: .95rem;
+        border-radius: 999px;
+    }
+
+    /* Botones RRSS del footer aún más pequeños */
+    .social-link--sm{
+        padding: .3rem .6rem;
+        font-size: .78rem;
+        border-radius: 8px;
+    }
+
+    /* Vídeo centrado y con top/bottom cómodos */
+    .videos{
+        margin: 2rem auto;
+        padding: 0 .5rem;
+        text-align: center;               /* evita texto pegado a la izquierda */
+    }
+    .featured-video{ max-width: 100%; }
+
+    /* Tarjetas de texto: respiración y tipografía */
+    .section-card{
+        padding: .9rem .85rem;
+    }
+    .about p, .mission p, .content-types li{
+        font-size: .98rem;
+        line-height: 1.55;
+    }
+
+    /* Bloque del directo: compacto y legible */
+    .live{
+        padding: 1rem .85rem;
+    }
+    #countdown{
+        font-size: clamp(1.4rem, 6.5vw, 2.2rem); /* contador más grande que el párrafo, pero no desborda */
+        letter-spacing: .3px;
+        margin: .35rem 0 .15rem;
+    }
+    .live-date{
+        font-size: .95rem;
+    }
+
+    /* Botón CTA del directo */
+    .btn-outline-green{
+        padding: .6rem 1rem;
+        font-size: .95rem;
+        border-radius: 10px;
+        display: inline-block;
+    }
+}
+
+/* Móviles pequeños (≤ 380px aprox) */
+@media (max-width: 380px){
+    body{ padding: 1rem; }
+    .nav-link{
+        padding: .45rem .7rem;
+        font-size: .9rem;
+    }
+    #countdown{ font-size: 1.3rem; }
+    .hero .tagline{
+        font-size: 1rem;                 /* subtítulo más contenido */
+        letter-spacing: .3px;
+    }
+    .logo{
+        width: 80px; height: 80px;       /* logo un poco menor */
+    }
+}
 
 
 
